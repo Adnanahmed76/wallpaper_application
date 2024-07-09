@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:wallpaper_application/screen/fullscreen.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -72,8 +73,13 @@ String url="https://api.pexels.com/v1/curated?per_page=80&page="+page.toString()
                 childAspectRatio: 2/3,
                 ),
                  itemBuilder: (context,index){
-                  return Container(
-                    child: Image.network(images[index]?['src']['tiny'],fit: BoxFit.cover,),
+                  return InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Fullscreen(imageUrl: images[index]?['src']['large2x'],)));
+                    },
+                    child: Container(
+                      child: Image.network(images[index]?['src']['tiny'],fit: BoxFit.cover,),
+                    ),
                   );
                  }),
             )),
