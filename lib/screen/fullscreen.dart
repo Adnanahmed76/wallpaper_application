@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 class Fullscreen extends StatefulWidget {
   final String imageUrl;
   const Fullscreen({Key? key,required this.imageUrl}): super (key: key);
@@ -8,6 +10,12 @@ class Fullscreen extends StatefulWidget {
 }
 
 class _FullscreenState extends State<Fullscreen> {
+ Future<void> setWallpaper()async{
+    int location=WallpaperManager.HOME_SCREEN;
+    var file = await DefaultCacheManager().getSingleFile(widget.imageUrl);
+    String result=(await WallpaperManager.setWallpaperFromFile(file.path, location)) as String;
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
