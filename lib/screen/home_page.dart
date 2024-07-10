@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //list for use wallpaper
   List images = [];
   int page = 1;
 
