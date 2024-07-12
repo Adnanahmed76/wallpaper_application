@@ -45,7 +45,7 @@ class _FullscreenState extends State<Fullscreen> {
             Navigator.pop(context);
           },
         ),
-        title: Text('Fullscreen Image', style: TextStyle(color: Colors.white)),
+        title: Text('FullScreen Image', style: TextStyle(color: Colors.white)),
       ),
       body: Column(
         children: [
