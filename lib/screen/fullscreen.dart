@@ -3,6 +3,7 @@ import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 class Fullscreen extends StatefulWidget {
+  //using string for api url
   final String imageUrl;
   const Fullscreen({Key? key, required this.imageUrl}) : super(key: key);
 
