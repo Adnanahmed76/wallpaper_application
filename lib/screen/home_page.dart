@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<bool> _onWillPop() async {
-    return true; // Returning true will allow the app to close
+    return true; 
   }
 
   @override
