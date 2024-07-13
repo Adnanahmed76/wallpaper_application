@@ -57,16 +57,11 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  Future<bool> _onWillPop() async {
-    return true; 
-  }
 
   @override
   Widget build(BuildContext context) {
 
-    return WillPopScope(
-      onWillPop: _onWillPop,
-      child: Scaffold(
+    return  Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
@@ -120,7 +115,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }
