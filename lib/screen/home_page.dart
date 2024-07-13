@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
 
   Loadmore() async {
     setState(() {
+      //increase page value 
       page = page + 1;
     });
     String url = "https://api.pexels.com/v1/curated?per_page=80&page=" + page.toString();
