@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   fetchapi() async {
+    //get api 
     await http.get(
       Uri.parse("https://api.pexels.com/v1/curated?per_page=80"),
       headers: {
