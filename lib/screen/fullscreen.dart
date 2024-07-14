@@ -24,7 +24,7 @@ class _FullscreenState extends State<Fullscreen> {
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to set wallpaper')),
+          SnackBar(content: Text('Failed set wallpaper')),
         );
       }
     } catch (e) {
