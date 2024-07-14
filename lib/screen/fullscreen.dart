@@ -12,7 +12,7 @@ class Fullscreen extends StatefulWidget {
 }
 
 class _FullscreenState extends State<Fullscreen> {
-
+  //function for set wallpaper in homescreen
   Future<void> setWallpaper() async {
     try {
       int location = WallpaperManager.HOME_SCREEN;
